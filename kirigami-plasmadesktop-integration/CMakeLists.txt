@@ -25,13 +25,13 @@ target_link_libraries(oxygenkirigamiplatform
 )
 
 if (HAVE_DBUS)
-    target_link_libraries(org.kde.oxygen
+    target_link_libraries(oxygenkirigamiplatform
         PRIVATE
         Qt6::DBus
     )
-    target_compile_definitions(org.kde.oxygen PRIVATE -DHAVE_QTDBUS=1)
+    target_compile_definitions(oxygenkirigamiplatform PRIVATE -DHAVE_QTDBUS=1)
 else()
-    target_compile_definitions(org.kde.oxygen PRIVATE -DHAVE_QTDBUS=0)
+    target_compile_definitions(oxygenkirigamiplatform PRIVATE -DHAVE_QTDBUS=0)
 endif()
 
 if(WIN32)
