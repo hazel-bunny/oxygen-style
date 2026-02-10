@@ -8,3 +8,6 @@ CMakeLists.txt.user*
 .clang-format
 .cache
 /cursors/build
+.DS_Store
+.gitlab-ci.yml
+.kde-ci.yml
