@@ -79,6 +79,7 @@ ecm_target_qml_sources(OxygenStyle SOURCES
     RoundButton.qml
     ScrollBar.qml
     ScrollView.qml
+    SearchField.qml
     Slider.qml
     SpinBox.qml
     StackView.qml
