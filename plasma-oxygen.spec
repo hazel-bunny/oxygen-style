@@ -5,18 +5,14 @@
 %global dev   hazel-bunny
 %global app_id org.kde.%{style}
 
-%if 0%{?rhel} && 0%{?rhel} >= 10
-%bcond_with kf5
-%else
-%bcond_without kf5
-%endif
+%bcond kf5 %[%{undefined rhel} || 0%{?rhel} < 10]
 
 Name:           plasma-%{style}-%{dev}
-Version:        6.6.0
+Version:        6.6.1
 
 %global forgeurl https://github.com/%{dev}/%{style}-style
 %global tag %{version}
-%global date 20260209
+%global date 20260226
 %forgemeta
 
 # https://fedoraproject.org/wiki/Changes/EncourageI686LeafRemoval
@@ -27,7 +23,6 @@ Summary:        The Oxygen style for KDE, updated to maintain its former glory, 
 License:        CC0-1.0 AND GPL-2.0-only AND GPL-2.0-or-later AND GPL-3.0-only AND GPL-3.0-or-later AND LGPL-2.0-only AND LGPL-2.0-or-later AND LGPL-2.1-only AND LGPL-3.0-only AND (GPL-2.0-only OR GPL-3.0-only) AND (LGPL-2.1-only OR LGPL-3.0-only) AND MIT
 URL:            %{forgeurl}
 Source:         %{forgesource}
-# Patch:          window_buttons_workaround.patch
 
 # Misc
 BuildRequires:  chrpath
@@ -88,6 +83,7 @@ BuildRequires:  cmake(Qt6GuiPrivate)
 Requires:       kf6-filesystem
 
 Requires:       %{name}-qt6
+Requires:       %{name}-colors
 Requires:       %{name}-cursor-themes >= %{version}
 Requires:       qqc2-%{style}-style
 Requires:       %{style}-sound-theme
@@ -110,13 +106,11 @@ This is a fork of the Oxygen KDE style which was originally implemented for KDE4
 %license LICENSES/*
 %{_bindir}/%{style}-settings6
 %{_kf6_datadir}/applications/kcm_%{style}decoration.desktop
-%{_kf6_datadir}/color-schemes/Oxygen.colors
-%{_kf6_datadir}/color-schemes/OxygenCold.colors
 %{_kf6_datadir}/icons/hicolor/*/apps/%{style}-settings.*
 %{_kf6_datadir}/kstyle/themes/%{style}.themerc
 %{_kf6_datadir}/plasma/look-and-feel/%{app_id}/
 %{_kf6_datadir}/plasma/desktoptheme/%{style}/
-# %%{_kf6_metainfodir}/%{app_id}.appdata.xml
+%{_kf6_datadir}/plasma/desktoptheme/air/
 %{_kf6_qtplugindir}/kstyle_config/kstyle_%{style}_config.so
 %{_kf6_qtplugindir}/org.kde.kdecoration3.kcm/kcm_%{style}decoration.so
 %{_kf6_qtplugindir}/org.kde.kdecoration3/%{app_id}.so
@@ -154,6 +148,38 @@ Conflicts:      plasma-%{style}-qt6
 %{_libdir}/lib%{style}style6.so.*
 %{_libdir}/lib%{style}styleconfig6.so.*
 %{_kf6_qtplugindir}/styles/%{style}6.so
+
+#--------------------------------------------------------------------------------------------------
+
+%package        colors
+Summary:        Oxygen color schemes
+BuildArch:      noarch
+
+%description    colors
+%{summary}.
+
+%files          colors
+%{_kf6_datadir}/color-schemes/BlueDeep.colors
+%{_kf6_datadir}/color-schemes/CherryBlossom.colors
+%{_kf6_datadir}/color-schemes/Chrome.colors
+%{_kf6_datadir}/color-schemes/Desert.colors
+%{_kf6_datadir}/color-schemes/EveningLilac.colors
+%{_kf6_datadir}/color-schemes/HazelDark.colors
+%{_kf6_datadir}/color-schemes/HighlandMist.colors
+%{_kf6_datadir}/color-schemes/Honeycomb.colors
+%{_kf6_datadir}/color-schemes/MidnightMeadow.colors
+%{_kf6_datadir}/color-schemes/Norway.colors
+%{_kf6_datadir}/color-schemes/ObsidianCoast.colors
+%{_kf6_datadir}/color-schemes/Oxygen.colors
+%{_kf6_datadir}/color-schemes/OxygenCold.colors
+%{_kf6_datadir}/color-schemes/Steel.colors
+%{_kf6_datadir}/color-schemes/StoneOrchid.colors
+%{_kf6_datadir}/color-schemes/Terra.colors
+%{_kf6_datadir}/color-schemes/WhitePeach.colors
+%{_kf6_datadir}/color-schemes/Whitewater.colors
+%{_kf6_datadir}/color-schemes/WontonSoup.colors
+%{_kf6_datadir}/color-schemes/Zion.colors
+%{_kf6_datadir}/color-schemes/ZionReversed.colors
 
 #--------------------------------------------------------------------------------------------------
 
@@ -198,7 +224,6 @@ Requires:       kf6-qqc2-desktop-style
 mkdir qt6build qt5build
 pushd qt6build
 %cmake_kf6 -S .. -DBUILD_QT6=ON -DBUILD_QT5=OFF
-# -DCMAKE_BUILD_WITH_INSTALL_RPATH=OFF -DCMAKE_SKIP_INSTALL_RPATH=ON
 %cmake_build
 popd
 
@@ -230,6 +255,9 @@ chrpath --delete %{buildroot}%{_libdir}/qt6/plugins/kf6/kirigami/platform/org.kd
 #---------------------------------------------------------------------------------------------------
 
 %changelog
+* Thu Feb 26 2026 Hazel Bunny <hazel_bunny@disroot.org> - 6.6.1-1
+- Update to 6.6.1
+
 * Mon Feb 9 2026 Hazel Bunny <hazel_bunny@disroot.org> - 6.6.0-0
 - Update to 6.6.0
 
