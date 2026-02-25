@@ -338,10 +338,10 @@ public:
     virtual QRegion roundedMask(const QRect &, int left = 1, int right = 1, int top = 1, int bottom = 1) const;
 
     //* returns a region matching given rect, with rounded corners
-    virtual QBitmap roundedMask(const QSize &, Corners corners = AllCorners, qreal radius = 4) const;
+    virtual QBitmap roundedMask(const QSize &, Corners corners = AllCorners, qreal radius = 5) const;
 
     //* return rounded path in a given rect, with only selected corners rounded, and for a given radius
-    QPainterPath roundedPath(const QRect &, Corners = AllCorners, qreal = 4) const;
+    QPainterPath roundedPath(const QRect &, Corners = AllCorners, qreal = 5) const;
 
     //* draw frame that mimics some sort of shadows around a panel
     /** it is used for menus, detached dock panels and toolbar, as well as window decoration when compositing is disabled */

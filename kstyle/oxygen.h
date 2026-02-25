@@ -30,7 +30,7 @@ using ScopedPointer = QScopedPointer<T, QScopedPointerPodDeleter>;
 enum Metrics {
     // frames
     Frame_FrameWidth = 2,
-    Frame_FrameRadius = 3,
+    Frame_FrameRadius = 5,
 
     // layout
     Layout_TopLevelMarginWidth = 10,
