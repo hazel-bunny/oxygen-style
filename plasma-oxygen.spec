@@ -8,11 +8,11 @@
 %bcond kf5 %[%{undefined rhel} || 0%{?rhel} < 10]
 
 Name:           plasma-%{style}-%{dev}
-Version:        6.6.1
+Version:        6.6.2
 
 %global forgeurl https://github.com/%{dev}/%{style}-style
 %global tag %{version}
-%global date 20260226
+%global date 20260307
 %forgemeta
 
 # https://fedoraproject.org/wiki/Changes/EncourageI686LeafRemoval
@@ -109,6 +109,7 @@ This is a fork of the Oxygen KDE style which was originally implemented for KDE4
 %{_kf6_datadir}/icons/hicolor/*/apps/%{style}-settings.*
 %{_kf6_datadir}/kstyle/themes/%{style}.themerc
 %{_kf6_datadir}/plasma/look-and-feel/%{app_id}/
+%{_kf6_datadir}/plasma/desktoptheme/%{style}-remix/
 %{_kf6_datadir}/plasma/desktoptheme/%{style}/
 %{_kf6_datadir}/plasma/desktoptheme/air/
 %{_kf6_qtplugindir}/kstyle_config/kstyle_%{style}_config.so
@@ -255,6 +256,9 @@ chrpath --delete %{buildroot}%{_libdir}/qt6/plugins/kf6/kirigami/platform/org.kd
 #---------------------------------------------------------------------------------------------------
 
 %changelog
+* Sat Mar 7 2026 Hazel Bunny <hazel_bunny@disroot.org> - 6.6.2-1
+- Update to 6.6.2
+
 * Thu Feb 26 2026 Hazel Bunny <hazel_bunny@disroot.org> - 6.6.1-1
 - Update to 6.6.1
 
