@@ -100,4 +100,5 @@ endfunction()
 
 
 add_subdirectory( oxygen )
+add_subdirectory( oxygen-remix )
 add_subdirectory( air )
