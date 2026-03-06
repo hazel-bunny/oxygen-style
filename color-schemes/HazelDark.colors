@@ -62,7 +62,7 @@ ForegroundPositive=111,255,183
 ForegroundVisited=235,162,255
 
 [Colors:Window]
-BackgroundAlternate=36,36,38
+BackgroundAlternate=54,54,54
 BackgroundNormal=30,30,32
 DecorationFocus=50,50,50
 DecorationHover=50,50,50
@@ -76,8 +76,8 @@ ForegroundPositive=111,255,183
 ForegroundVisited=235,161,255
 
 [General]
-ColorScheme=Se7enAero
-Name=Se7en Aero
+ColorScheme=HazelDark
+Name=Hazel Dark
 shadeSortColumn=true
 
 [KDE]
