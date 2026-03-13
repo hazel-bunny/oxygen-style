@@ -8,11 +8,11 @@
 %bcond kf5 %[%{undefined rhel} || 0%{?rhel} < 10]
 
 Name:           plasma-%{style}-%{dev}
-Version:        6.6.2
+Version:        6.6.3
 
 %global forgeurl https://github.com/%{dev}/%{style}-style
 %global tag %{version}
-%global date 20260307
+%global date 20260314
 %forgemeta
 
 # https://fedoraproject.org/wiki/Changes/EncourageI686LeafRemoval
@@ -256,10 +256,13 @@ chrpath --delete %{buildroot}%{_libdir}/qt6/plugins/kf6/kirigami/platform/org.kd
 #---------------------------------------------------------------------------------------------------
 
 %changelog
-* Sat Mar 7 2026 Hazel Bunny <hazel_bunny@disroot.org> - 6.6.2-1
+* Sat Mar 14 2026 Hazel Bunny <hazel_bunny@disroot.org> - 6.6.3-0
+- Update to 6.6.3
+
+* Sat Mar 7 2026 Hazel Bunny <hazel_bunny@disroot.org> - 6.6.2-0
 - Update to 6.6.2
 
-* Thu Feb 26 2026 Hazel Bunny <hazel_bunny@disroot.org> - 6.6.1-1
+* Thu Feb 26 2026 Hazel Bunny <hazel_bunny@disroot.org> - 6.6.1-0
 - Update to 6.6.1
 
 * Mon Feb 9 2026 Hazel Bunny <hazel_bunny@disroot.org> - 6.6.0-0
