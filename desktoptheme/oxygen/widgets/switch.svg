@@ -2,11 +2,11 @@
 <svg
    id="svg2"
    version="1.1"
-   viewBox="0 0 128.60001 64.099997"
+   viewBox="0 0 137.14547 52.100001"
    sodipodi:docname="switch.svg"
    inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
-   width="128.60001"
-   height="64.099998"
+   width="137.14546"
+   height="52.100002"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -184,7 +184,7 @@
        xlink:href="#linearGradient3610-7"
        id="radialGradient4000"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(-1.6325188e-7,0.91437488,-0.94999979,-1.6961234e-7,190.69998,5.3079783)"
+       gradientTransform="matrix(-1.6325188e-7,0.91437488,-0.94999979,-1.6961234e-7,190.84543,-4.6920212)"
        cx="48.316662"
        cy="105.99999"
        fx="48.316662"
@@ -249,7 +249,7 @@
        xlink:href="#linearGradient4254-2"
        id="radialGradient4015-9"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.85714145,0,0,0.85714143,51.571548,19.857202)"
+       gradientTransform="matrix(0.85714145,0,0,0.85714143,51.717001,9.8572025)"
        cx="74"
        cy="34"
        fx="74"
@@ -261,7 +261,7 @@
        fx="48.316662"
        cy="105.99999"
        cx="48.316662"
-       gradientTransform="matrix(-1.8175821e-7,1.0180288,-1.0576922,-1.8883971e-7,123.75888,-1.8175446)"
+       gradientTransform="matrix(-1.9690472e-7,1.1028645,-1.1458332,-2.0457635e-7,132.94797,-5.7710871)"
        gradientUnits="userSpaceOnUse"
        id="radialGradient3638"
        xlink:href="#linearGradient3610"
@@ -312,51 +312,51 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="true"
      inkscape:zoom="8.2888629"
-     inkscape:cx="10.616655"
-     inkscape:cy="44.879498"
-     inkscape:window-width="1280"
-     inkscape:window-height="638"
+     inkscape:cx="62.07124"
+     inkscape:cy="36.434431"
+     inkscape:window-width="2048"
+     inkscape:window-height="1068"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="handle"
+     inkscape:current-layer="handle-hover"
      showguides="true">
     <inkscape:grid
        type="xygrid"
        id="grid286"
-       originx="0"
-       originy="2.9999998e-07"
+       originx="0.14545263"
+       originy="-9.999999"
        spacingy="1"
        spacingx="1"
        units="px"
        visible="true" />
     <sodipodi:guide
-       position="11,25.384613"
+       position="11.145453,23.384617"
        orientation="1,0"
        id="guide665"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="45,-6.615387"
+       position="45.145452,-8.9000002"
        orientation="1,0"
        id="guide826"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="89.999998,-15.900004"
+       position="90.145451,-17.900001"
        orientation="0,-1"
        id="guide828"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="13,26.099997"
+       position="13.145453,24.100001"
        orientation="1,0"
        id="guide1"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="13.685809,5.8999983"
+       position="13.831262,3.9000017"
        orientation="0,-1"
        id="guide4"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="20,29.099997"
+       position="20.145453,27.100001"
        orientation="0,-1"
        id="guide23"
        inkscape:locked="false" />
@@ -385,28 +385,28 @@
         }</style>
   <rect
      id="hint-stretch-borders"
-     y="31.000002"
+     y="38.000004"
      width="4"
      height="4"
      fill="#ff2a2a"
-     x="140" />
+     x="128.14545" />
   <rect
-     style="fill:#0000ff;stroke-width:145.989;stroke-linecap:round"
+     style="fill:#0000ff;stroke-width:156.246;stroke-linecap:round"
      id="hint-bar-size"
-     width="40"
-     height="22"
-     x="95"
-     y="13.000002" />
+     width="42"
+     height="24"
+     x="95.145454"
+     y="1.0000021" />
   <path
      style="fill:url(#radialGradient4000);fill-opacity:1;stroke:none;stroke-width:1.08334"
-     d="m 89.999997,36.000001 c -7.179705,0 -13,5.820295 -13,13 0,7.179705 5.820295,13 13,13 7.179705,0 13.000003,-5.820295 13.000003,-13 0,-7.179705 -5.820298,-13 -13.000003,-13 z m 0,4 c 4.970569,0 9,4.029431 9,9 0,4.970569 -4.029431,9 -9,9 -4.970568,0 -9,-4.029431 -9,-9 0,-4.970569 4.029432,-9 9,-9 z"
+     d="m 90.14545,26.000001 c -7.179705,0 -13,5.820295 -13,13 0,7.179705 5.820295,13 13,13 7.179705,0 13,-5.820295 13,-13 0,-7.179705 -5.820295,-13 -13,-13 z m 0,4 c 4.970569,0 9,4.029431 9,9 0,4.970569 -4.029431,9 -9,9 -4.970568,0 -9,-4.029431 -9,-9 0,-4.970569 4.029432,-9 9,-9 z"
      id="handle-shadow"
      inkscape:connector-curvature="0"
      inkscape:label="#handle-shadow"
      sodipodi:nodetypes="ssssssssss" />
   <g
      id="handle"
-     transform="matrix(0.94545455,0,0,0.94545455,1.9916085,4.6636361)">
+     transform="matrix(0.94545455,0,0,0.94545455,2.1370611,-5.3363634)">
     <g
        id="g1"
        inkscape:label="#handle">
@@ -417,13 +417,12 @@
          cy="47"
          r="9.624999"
          inkscape:label="path" />
-      <ellipse
+      <circle
          id="path3606"
-         style="opacity:0;fill:url(#radialGradient3638);fill-opacity:1;stroke:none;stroke-width:1.15944"
-         cx="11.643491"
-         cy="46.894234"
-         ry="12.692308"
-         rx="12.692307" />
+         style="opacity:0;fill:url(#radialGradient3638);fill-opacity:1;stroke:none;stroke-width:1.25606"
+         cx="11.489647"
+         cy="47"
+         r="13.75" />
       <path
          inkscape:connector-curvature="0"
          id="path3220"
@@ -433,7 +432,7 @@
   </g>
   <g
      id="handle-pressed"
-     transform="matrix(-0.94545455,0,0,0.94545455,122.08182,3.7181818)"
+     transform="matrix(-0.94545455,0,0,0.94545455,122.22727,-6.2818177)"
      inkscape:label="#handle-pressed">
     <g
        id="g1-2"
@@ -462,7 +461,7 @@
   <g
      id="handle-hover"
      inkscape:label="#handle-hover"
-     transform="matrix(0.94545455,0,0,0.94545455,6.8545446,4.5636364)">
+     transform="matrix(0.94545455,0,0,0.94545455,6.9999972,-5.4363631)">
     <g
        id="g4"
        transform="translate(22.625)"
@@ -490,14 +489,14 @@
   <path
      inkscape:connector-curvature="0"
      style="opacity:0.8;fill:url(#radialGradient4015-9);fill-opacity:1;stroke:none;stroke-width:1.08334"
-     d="m 115,36.000001 c -7.17971,0 -13,5.820297 -13,13 C 102,56.179702 107.82029,62 115,62 c 7.1797,0 13,-5.820298 13,-12.999999 0,-7.179703 -5.8203,-13 -13,-13 z m 0,3.800001 c 5.08103,0 9.2,4.118979 9.2,9.199999 0,5.08102 -4.11897,9.199999 -9.2,9.199999 -5.08103,0 -9.2,-4.118979 -9.2,-9.199999 0,-5.08102 4.11897,-9.199999 9.2,-9.199999 z"
+     d="m 115.14545,26.000001 c -7.17971,0 -13,5.820297 -13,13 0,7.179701 5.82029,12.999999 13,12.999999 7.1797,0 13,-5.820298 13,-12.999999 0,-7.179703 -5.8203,-13 -13,-13 z m 0,3.800001 c 5.08103,0 9.2,4.118979 9.2,9.199999 0,5.08102 -4.11897,9.199999 -9.2,9.199999 -5.08103,0 -9.2,-4.118979 -9.2,-9.199999 0,-5.08102 4.11897,-9.199999 9.2,-9.199999 z"
      id="handle-focus"
      inkscape:label="#handle-focus"
      sodipodi:nodetypes="ssssssssss" />
   <g
      id="inactive-center"
      inkscape:label="#inactive-center"
-     transform="matrix(2.9999362,0,0,1,-17.999564,29.000001)"
+     transform="matrix(2.9999362,0,0,1,-17.854111,19.000001)"
      style="stroke-width:0.577356">
     <g
        id="groove-center"
@@ -555,7 +554,7 @@
   <g
      id="inactive-left"
      inkscape:label="#inactive-left"
-     transform="matrix(0.99991017,0,0,1,2.2448663e-4,0)"
+     transform="matrix(0.99991017,0,0,1,0.14567711,-9.9999995)"
      style="stroke-width:1.00004">
     <path
        id="path13"
@@ -588,7 +587,7 @@
   <g
      id="inactive-right"
      inkscape:label="#inactive-right"
-     transform="matrix(0.9999102,0,0,1,10.001211,5.9896372e-7)"
+     transform="matrix(0.9999102,0,0,1,10.146664,-9.9999989)"
      style="stroke-width:1.00004">
     <path
        style="font-variation-settings:'wght' 100;fill:#000000;fill-opacity:0.08;stroke-width:9.00041;stroke-linecap:round;stroke-linejoin:round"
@@ -621,7 +620,7 @@
   <g
      id="active-center"
      inkscape:label="#active-center"
-     transform="matrix(2.9999362,0,0,1,29.500859,29.000001)"
+     transform="matrix(2.9999362,0,0,1,29.646312,19.000001)"
      style="stroke-width:0.577356">
     <g
        id="groove-center-5"
@@ -679,7 +678,7 @@
   <g
      id="active-left"
      inkscape:label="#active-left"
-     transform="matrix(0.99991017,0,0,1,47.500647,-4.7002791e-7)"
+     transform="matrix(0.99991017,0,0,1,47.6461,-10)"
      style="stroke-width:1.00004">
     <path
        id="path13-0"
@@ -712,7 +711,7 @@
   <g
      id="active-right"
      inkscape:label="#active-right"
-     transform="matrix(0.9999102,0,0,1,57.501634,1.2997209e-7)"
+     transform="matrix(0.9999102,0,0,1,57.647087,-9.9999994)"
      style="stroke-width:1.00004">
     <path
        style="font-variation-settings:'wght' 100;fill:#4ee3fc;fill-opacity:1;stroke-width:9.00041;stroke-linecap:round;stroke-linejoin:round"
