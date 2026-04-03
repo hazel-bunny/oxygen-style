@@ -11,7 +11,7 @@
         "Id": "oxygen-remix",
         "License": "GPL",
         "Name": "Oxygen Remix",
-        "Version": "6.6.2"
+        "Version": "6.6.4"
     },
     "X-Plasma-API": "6.0"
 }
