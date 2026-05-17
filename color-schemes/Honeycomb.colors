@@ -88,6 +88,25 @@ ForegroundVisited=100,74,155
 
 [General]
 Name=Honeycomb
+Name[ar]=قرص عسل
+Name[ca]=Honeycomb
+Name[ca@valencia]=Honeycomb
+Name[es]=Panal
+Name[fr]=Rayon de miel
+Name[he]=חלת דבש
+Name[ia]=Honeycomb
+Name[it]=Nido d'ape
+Name[ka]=ფიჭა
+Name[ko]=벌집
+Name[nl]=Honingraat
+Name[nn]=Bikube
+Name[pt_BR]=Favo de mel
+Name[sk]=Plást medu
+Name[sl]=Satovje
+Name[tr]=Bal Peteği
+Name[ug]=ھەرە كۆنىكى
+Name[uk]=Стільники
+Name[zh_CN]=Honeycomb 峰巢
 
 [WM]
 activeBackground=227,170,0

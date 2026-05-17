@@ -88,6 +88,25 @@ ForegroundVisited=100,74,155
 
 [General]
 Name=White Peach
+Name[ar]=الخوخ الأبيض
+Name[ca]=White Peach
+Name[ca@valencia]=White Peach
+Name[es]=Melocotón blanco
+Name[fr]=Pêche blanche
+Name[he]=אפרסק לבן
+Name[ia]=White Peach
+Name[it]=Pesca bianca
+Name[ka]=თეთრი ატამი
+Name[ko]=하얀 복숭아
+Name[nl]=Witte perzik
+Name[nn]=Kvit fersken
+Name[pt_BR]=Pêssego branco
+Name[sk]=Biela broskyňa
+Name[sl]=Bela breskev
+Name[tr]=Ak Kayısı
+Name[ug]=ئاق شاپتۇل
+Name[uk]=Білий персик
+Name[zh_CN]=White Peach 白桃
 
 [WM]
 activeBackground=128,112,96

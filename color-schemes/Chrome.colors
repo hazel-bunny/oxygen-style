@@ -88,6 +88,26 @@ ForegroundVisited=100,74,155
 
 [General]
 Name=Chrome
+Name[ar]=كروم
+Name[ca]=Chrome
+Name[ca@valencia]=Chrome
+Name[cs]=Chrome
+Name[es]=Cromo
+Name[fr]=Chrome
+Name[he]=כרום
+Name[ia]=Chrome
+Name[it]=Cromo
+Name[ka]=ქრომი
+Name[ko]=크롬
+Name[nl]=Chrome
+Name[nn]=Krom
+Name[pt_BR]=Cromo
+Name[sk]=Chróm
+Name[sl]=Krom
+Name[tr]=Krom
+Name[ug]=Chrome
+Name[uk]=Хром
+Name[zh_CN]=Chrome 谷歌
 
 [WM]
 activeBackground=144,168,192

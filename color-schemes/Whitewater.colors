@@ -86,6 +86,25 @@ ForegroundVisited=147,87,211
 
 [General]
 Name=Whitewater
+Name[ar]=وايت ووتر
+Name[ca]=Whitewater
+Name[ca@valencia]=Whitewater
+Name[es]=Aguas bravas
+Name[fr]=Eaux vives
+Name[he]=מים לבנים
+Name[ia]=Whitewater
+Name[it]=Schiuma di mare
+Name[ka]=თეთრი წყალი
+Name[ko]=화이트워터
+Name[nl]=Wit water
+Name[nn]=Elvestryk
+Name[pt_BR]=Águas bravas
+Name[sk]=Biela voda
+Name[sl]=Divja voda
+Name[tr]=Aksu
+Name[ug]=شىددەتلىك ئېقىم
+Name[uk]=Біла вода
+Name[zh_CN]=Whitewater 激流
 
 [WM]
 activeBackground=41,101,164

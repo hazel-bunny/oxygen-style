@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25)
 project(oxygen)
-set(PROJECT_VERSION "6.6.2")
+set(PROJECT_VERSION "6.6.5")
 set(PROJECT_VERSION_MAJOR 6)
 
 include(GenerateExportHeader)
@@ -132,8 +132,8 @@ block(SCOPE_FOR VARIABLES)
     add_subdirectory(desktoptheme)
     add_subdirectory(kdecoration)
     add_subdirectory(kirigami-plasmadesktop-integration)
-
-    plasma_install_package(lookandfeel org.kde.oxygen look-and-feel lookandfeel)
+    add_subdirectory(lookandfeel)
+    add_subdirectory(wallpapers)
 
     ki18n_install(po)
 endblock()

@@ -88,6 +88,25 @@ ForegroundVisited=117,87,182
 
 [General]
 Name=Desert
+Name[ar]=صحراء
+Name[ca]=Desert
+Name[ca@valencia]=Desert
+Name[es]=Desierto
+Name[fr]=Désert
+Name[he]=מדבר
+Name[ia]=Desert
+Name[it]=Deserto
+Name[ka]=უდაბნო
+Name[ko]=사막
+Name[nl]=Woestijn
+Name[nn]=Ørken
+Name[pt_BR]=Deserto
+Name[sk]=Púšť
+Name[sl]=Puščava
+Name[tr]=Çöl
+Name[ug]=قۇملۇق
+Name[uk]=Пустеля
+Name[zh_CN]=Desert 沙漠
 
 [WM]
 activeBackground=156,14,14

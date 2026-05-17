@@ -87,6 +87,25 @@ ForegroundVisited=142,121,165
 
 [General]
 Name=Obsidian Coast
+Name[ar]=ساحل أوبسيديان
+Name[ca]=Obsidian Coast
+Name[ca@valencia]=Obsidian Coast
+Name[es]=Costa de obsidiana
+Name[fr]=Côte d'Obsidienne
+Name[he]=חוף זכוכית געשית
+Name[ia]=Obsidian Coast
+Name[it]=Costa di ossidiana
+Name[ka]=ობსიდიანის სანაპირო
+Name[ko]=흑요석 해안
+Name[nl]=Obsidiaankust
+Name[nn]=Obsidian-kyst
+Name[pt_BR]=Costa de obsidiana
+Name[sk]=Obsidiánové pobrežie
+Name[sl]=Obsidianova obala
+Name[tr]=Kara Sahil
+Name[ug]=ئوبسىدىئان دېڭىز قىرغىقى
+Name[uk]=Обсидіановий берег
+Name[zh_CN]=Obsidian Coast 黑岸
 
 [WM]
 activeBackground=19,47,80
