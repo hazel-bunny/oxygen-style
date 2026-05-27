@@ -1,6 +1,3 @@
-%global toolchain clang
-%define _lto_cflags %{nil}
-
 %global style oxygen
 %global dev   hazel-bunny
 %global app_id org.kde.%{style}
@@ -17,11 +14,11 @@
 %bcond extra_cursors %[%{undefined rhel} || 0%{?rhel} < 10]
 
 Name:           plasma-%{style}-%{dev}
-Version:        6.6.5
+Version:        6.6.6
 
 %global forgeurl https://github.com/%{dev}/%{style}-style
 %global tag %{version}
-%global date 20260404
+%global date 20260528
 %forgemeta
 
 # https://fedoraproject.org/wiki/Changes/EncourageI686LeafRemoval
@@ -35,8 +32,8 @@ Source:         %{forgesource}
 
 # Misc
 BuildRequires:  chrpath
-BuildRequires:  clang
 BuildRequires:  extra-cmake-modules
+BuildRequires:  gcc-c++
 BuildRequires:  gettext
 BuildRequires:  libxcb-devel
 BuildRequires:  cmake(Plasma)
@@ -163,7 +160,7 @@ Requires:       %{name}-cursor-themes >= %{version}
 Requires:       %{style}-sound-theme
 # for oxygen look-and-feel
 Requires:       %{style}-icon-theme
-Conflicts:      plasma-%{style}
+Conflicts:      plasma-air
 
 %description -n plasma-air-%{dev}
 %{summary}.
@@ -320,10 +317,13 @@ Requires:       kf6-qqc2-desktop-style
 %prep
 %forgeautosetup -p1
 
-cd cursors/src
+%if %{with extra_cursors}
 # Prepend necessary variables
-# sed -i '1s/^/project(oxygen)\n/' CMakeLists.txt
-# sed -i '1s/^/cmake_minimum_required(VERSION 3.25)\n/' CMakeLists.txt
+pushd cursors/src
+sed -i '1s/^/project(oxygen)\n/' CMakeLists.txt
+sed -i '1s/^/cmake_minimum_required(VERSION 3.25)\n/' CMakeLists.txt
+popd
+%endif
 
 %build
 mkdir qt6build qt5build
@@ -379,6 +379,9 @@ chrpath --delete %{buildroot}%{_libdir}/qt6/plugins/kf6/kirigami/platform/org.kd
 #---------------------------------------------------------------------------------------------------
 
 %changelog
+* Thu May 28 2026 Hazel Bunny <hazel_bunny@disroot.org> - 6.6.6-0
+- Update to 6.6.6
+
 * Mon May 18 2026 Hazel Bunny <hazel_bunny@disroot.org> - 6.6.5-0
 - Update to 6.6.5
 
