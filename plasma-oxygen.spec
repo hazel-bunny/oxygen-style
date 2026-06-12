@@ -14,7 +14,7 @@
 %bcond extra_cursors %[%{undefined rhel} || 0%{?rhel} < 10]
 
 Name:           plasma-%{style}-%{dev}
-Version:        6.6.6
+Version:        6.7.0
 
 %global forgeurl https://github.com/%{dev}/%{style}-style
 %global tag %{version}
@@ -320,7 +320,7 @@ Requires:       kf6-qqc2-desktop-style
 %if %{with extra_cursors}
 # Prepend necessary variables
 pushd cursors/src
-sed -i '1s/^/project(oxygen)\n/' CMakeLists.txt
+sed -i '1s/^/project(oxygen-cursors)\n/' CMakeLists.txt
 sed -i '1s/^/cmake_minimum_required(VERSION 3.25)\n/' CMakeLists.txt
 popd
 %endif
