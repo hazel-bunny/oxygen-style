@@ -1,0 +1,63 @@
+import QtQuick
+import QtQuick.Controls.impl
+import QtQuick.Templates as T
+import org.kde.desktop as Style
+import org.kde.qqc2oxygenstyle.private
+
+Style.Page {
+  id: page
+
+  SystemPalette {
+    id: activePalette
+    colorGroup: SystemPalette.Active
+  }
+
+  SystemPalette {
+    id: inactivePalette
+    colorGroup: SystemPalette.Inactive
+  }
+
+  Component.onCompleted: {
+    background = realBackground
+  }
+
+  OxygenGradientBackground {
+    id: realBackground
+    color: Qt.application.active ? activePalette.window : inactivePalette.window
+    window: page.Window.window
+    Component.onCompleted: {
+      initialize(OxygenHelper)
+    }
+  }
+
+  Connections {
+    target: Qt.application
+    function onActiveChanged() {
+      realBackground.color = Qt.application.active
+      ? activePalette.window
+      : inactivePalette.window
+      realBackground.update()
+    }
+  }
+
+  Component {
+    id: headerBackground
+    OxygenGradientBackground {
+      color: Qt.application.active ? activePalette.window : inactivePalette.window
+      window: page.Window.window
+      Component.onCompleted: {
+        initialize(OxygenHelper)
+      }
+    }
+  }
+
+  Connections {
+    ignoreUnknownSignals: true
+    target: page
+    function onGlobalToolBarItemChanged() {
+      if (page.globalToolBarItem) {
+        page.globalToolBarItem.background = headerBackground.createObject(page.globalToolBarItem)
+      }
+    }
+  }
+}

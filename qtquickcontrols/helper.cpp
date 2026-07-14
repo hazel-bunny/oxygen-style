@@ -35,3 +35,8 @@ void OxygenHelper::renderWindowBackground(QPainter *painter, const QRectF &clipR
 {
     _helper->renderWindowBackground(painter, clipRect, windowRect, color, -20);
 }
+
+void OxygenHelper::invalidateCaches()
+{
+    _helper->invalidateCaches();
+}

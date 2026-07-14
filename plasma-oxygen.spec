@@ -7,18 +7,18 @@
 #_cursorsize_="-big"
 
 # Theme list for cursors
-%define _themelist_ "bluecurve brown cherry chrome desert emerald green grey honeycomb hot_orange lilac midnight_meadow navy norway obsidian obsidian-hc olympus olympus-inv orchid oxygen peach purple red red-argentina sea_blue steel terra terra_green violet viorange whitewater wonton"
+# %%define _themelist_ "bluecurve brown cherry chrome desert emerald green grey honeycomb hot_orange lilac midnight_meadow navy norway obsidian obsidian-hc olympus olympus-inv orchid oxygen peach purple red red-argentina sea_blue steel terra terra_green violet viorange whitewater wonton"
 #_themelist_="${_themelist_} black blue white yellow zion"
 
 %bcond kf5 %[%{undefined rhel} || 0%{?rhel} < 10]
 %bcond extra_cursors %[%{undefined rhel} || 0%{?rhel} < 10]
 
 Name:           plasma-%{style}-%{dev}
-Version:        6.7.0
+Version:        6.7.1
 
 %global forgeurl https://github.com/%{dev}/%{style}-style
 %global tag %{version}
-%global date 20260528
+%global date 20260715
 %forgemeta
 
 # https://fedoraproject.org/wiki/Changes/EncourageI686LeafRemoval
@@ -36,7 +36,7 @@ BuildRequires:  extra-cmake-modules
 BuildRequires:  gcc-c++
 BuildRequires:  gettext
 BuildRequires:  libxcb-devel
-BuildRequires:  cmake(Plasma)
+BuildRequires:  ninja-build
 
 %if %{with extra_cursors}
 BuildRequires:  inkscape
@@ -82,6 +82,8 @@ BuildRequires:  cmake(KF6QQC2DesktopStyle)
 BuildRequires:  cmake(KF6Service)
 BuildRequires:  cmake(KF6WidgetsAddons)
 BuildRequires:  cmake(KF6WindowSystem)
+
+BuildRequires:  cmake(Plasma)
 
 BuildRequires:  cmake(Qt6Core)
 BuildRequires:  cmake(Qt6DBus)
@@ -317,13 +319,13 @@ Requires:       kf6-qqc2-desktop-style
 %prep
 %forgeautosetup -p1
 
-%if %{with extra_cursors}
+# %%if %{with extra_cursors}
 # Prepend necessary variables
-pushd cursors/src
-sed -i '1s/^/project(oxygen-cursors)\n/' CMakeLists.txt
-sed -i '1s/^/cmake_minimum_required(VERSION 3.25)\n/' CMakeLists.txt
-popd
-%endif
+# pushd cursors/src
+# sed -i '1s/^/project(oxygen-cursors)\n/' CMakeLists.txt
+# sed -i '1s/^/cmake_minimum_required(VERSION 3.25)\n/' CMakeLists.txt
+# popd
+# %%endif
 
 %build
 mkdir qt6build qt5build
@@ -341,12 +343,11 @@ popd
 
 %if %{with extra_cursors}
 pushd cursors/src
-cmake .
-
-for theme in bluecurve brown cherry chrome desert emerald green grey honeycomb hot_orange lilac midnight_meadow navy norway obsidian obsidian-hc olympus olympus-inv orchid oxygen peach purple red red-argentina sea_blue steel terra terra_green violet viorange whitewater wonton; do
-    make -j1 theme-${theme}%{_cursorsize_}
-done
-
+%cmake_kf6
+%cmake_build -j1
+# for theme in bluecurve brown cherry chrome desert emerald green grey honeycomb hot_orange lilac midnight_meadow navy norway obsidian obsidian-hc olympus olympus-inv orchid oxygen peach purple red red-argentina sea_blue steel terra terra_green violet viorange whitewater wonton; do
+#     %%__make -j1 theme-${theme}%%{_cursorsize_}
+# done
 popd
 %endif
 
@@ -362,10 +363,12 @@ popd
 %endif
 
 %if %{with extra_cursors}
-pushd cursors/src
+pushd cursors/src/%{_vpath_builddir}
+# %%cmake_install
 for theme in bluecurve brown cherry chrome desert emerald green grey honeycomb hot_orange lilac midnight_meadow navy norway obsidian obsidian-hc olympus olympus-inv orchid oxygen peach purple red red-argentina sea_blue steel terra terra_green violet viorange whitewater wonton; do
     cp -r --parents "oxy-${theme}%{_cursorsize_}/cursors" %{buildroot}%{_datadir}/icons/
-    cp "theme-${theme}/index.theme" %{buildroot}%{_datadir}/icons/oxy-${theme}%{_cursorsize_}/
+    cp -r "oxy-${theme}%{_cursorsize_}/cursors_scalable" %{buildroot}%{_datadir}/icons/oxy-${theme}%{_cursorsize_}/
+    cp "oxy-${theme}/index.theme" %{buildroot}%{_datadir}/icons/oxy-${theme}%{_cursorsize_}/
 done
 popd
 %endif
@@ -379,6 +382,12 @@ chrpath --delete %{buildroot}%{_libdir}/qt6/plugins/kf6/kirigami/platform/org.kd
 #---------------------------------------------------------------------------------------------------
 
 %changelog
+* Wed Jul 15 2026 Hazel Bunny <hazel_bunny@disroot.org> - 6.7.1-0
+- Update to 6.7.1
+
+* Fri Jun 12 2026 Hazel Bunny <hazel_bunny@disroot.org> - 6.7.0-0
+- Update to 6.7.0
+
 * Thu May 28 2026 Hazel Bunny <hazel_bunny@disroot.org> - 6.6.6-0
 - Update to 6.6.6
 

@@ -1,12 +1,5 @@
 macro(adjust in_size in_xhot in_yhot)
-   #math(EXPR out_size "( ${in_size} * ${resolution} ) / 90")
-   # The Oxygen cursors have different default sizes at 90 dpi:
-   # Some have 24x24 px, others have 32x32 px. This causes some
-   # side-effects when you want to choose your cursor size.
-   # Instead of the real in_size, we use 24 as convenience value.
-   # Xcursorlib interpretats this as a _nominal_ size; it is legal
-   # that the nominal size is different from the real size of the
-   # png image.
+   # Keep the historical Oxygen cursor scale model (24 px nominal at 90 DPI).
    math(EXPR out_size "( 24 * ${resolution} ) / 90")
    math(EXPR out_xhot "( ${in_xhot} * ${resolution} ) / 90")
    math(EXPR out_yhot "( ${in_yhot} * ${resolution} ) / 90")

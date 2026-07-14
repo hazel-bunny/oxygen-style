@@ -244,6 +244,11 @@ void PlasmaDesktopTheme::syncWindow()
 
 QIcon PlasmaDesktopTheme::iconFromTheme(const QString &name, const QColor &customColor)
 {
+    static auto useQtIconLoader = qApp->property("QQC2_DESKTOP_USE_QICON_FROM_THEME").toBool();
+    if (useQtIconLoader) {
+        return QIcon::fromTheme(name);
+    }
+
     if (customColor != Qt::transparent) {
         KIconColors colors;
         colors.setText(customColor);
@@ -306,6 +311,14 @@ void PlasmaDesktopTheme::syncColors()
     setHoverColor(colors.scheme.decoration(KColorScheme::HoverColor).color());
     setFocusColor(colors.scheme.decoration(KColorScheme::FocusColor).color());
     setFrameContrast(KColorScheme::frameContrast());
+
+    // FOR TESTING HOW KIRIGAMI BEHAVES WITH A TRANSPARENT BG
+    if (colorSet() == Header) {
+        setBackgroundColor(QColor(Qt::transparent));
+    }
+    if (colorSet() == Window) {
+        setBackgroundColor(QColor(Qt::transparent));
+    }
 }
 
 void PlasmaDesktopTheme::syncFrameContrast()

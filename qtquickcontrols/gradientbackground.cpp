@@ -8,6 +8,8 @@ OxygenGradientBackground::OxygenGradientBackground(QQuickItem *parent)
 {
     setVisible(false);
     connect(this, &OxygenGradientBackground::colorChanged, this, [this]() {
+        if (_helper)
+            _helper->invalidateCaches();
         update();
     });
 }

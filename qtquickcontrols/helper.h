@@ -19,6 +19,7 @@ public:
     bool useBackgroundGradient() const;
     QString menuHighlightMode() const;
     void renderWindowBackground(QPainter *, const QRectF &clipRect, const QRectF &windowRect, const QColor &);
+    void invalidateCaches();
 
 signals:
     void styleChanged();
