@@ -313,12 +313,12 @@ void PlasmaDesktopTheme::syncColors()
     setFrameContrast(KColorScheme::frameContrast());
 
     // FOR TESTING HOW KIRIGAMI BEHAVES WITH A TRANSPARENT BG
-    if (colorSet() == Header) {
-        setBackgroundColor(QColor(Qt::transparent));
-    }
-    if (colorSet() == Window) {
-        setBackgroundColor(QColor(Qt::transparent));
-    }
+    // if (colorSet() == Header) {
+    //     setBackgroundColor(QColor(Qt::transparent));
+    // }
+    // if (colorSet() == Window) {
+    //     setBackgroundColor(QColor(Qt::transparent));
+    // }
 }
 
 void PlasmaDesktopTheme::syncFrameContrast()

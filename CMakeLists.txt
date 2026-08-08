@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25)
 project(oxygen)
-set(PROJECT_VERSION "6.7.1")
+set(PROJECT_VERSION "6.7.2")
 set(PROJECT_VERSION_MAJOR 6)
 
 include(GenerateExportHeader)
@@ -128,7 +128,7 @@ block(SCOPE_FOR VARIABLES)
     add_subdirectory(qtquickcontrols qtquickcontrols6)
 
     add_subdirectory(color-schemes)
-    add_subdirectory(cursors)
+    # add_subdirectory(cursors)
     add_subdirectory(desktoptheme)
     add_subdirectory(kdecoration)
     add_subdirectory(kirigami-plasmadesktop-integration)

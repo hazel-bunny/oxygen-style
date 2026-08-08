@@ -11,14 +11,14 @@
 #_themelist_="${_themelist_} black blue white yellow zion"
 
 %bcond kf5 %[%{undefined rhel} || 0%{?rhel} < 10]
-%bcond extra_cursors %[%{undefined rhel} || 0%{?rhel} < 10]
+# %%bcond extra_cursors %%[%%{undefined rhel} || 0%%{?rhel} < 10]
 
 Name:           plasma-%{style}-%{dev}
-Version:        6.7.1
+Version:        6.7.2
 
 %global forgeurl https://github.com/%{dev}/%{style}-style
 %global tag %{version}
-%global date 20260715
+%global date 20260809
 %forgemeta
 
 # https://fedoraproject.org/wiki/Changes/EncourageI686LeafRemoval
@@ -38,12 +38,12 @@ BuildRequires:  gettext
 BuildRequires:  libxcb-devel
 BuildRequires:  ninja-build
 
-%if %{with extra_cursors}
-BuildRequires:  inkscape
-BuildRequires:  xcursorgen
-
-Suggests:       %{name}-cursor-themes-extra
-%endif
+# %%if %%{with extra_cursors}
+# BuildRequires:  inkscape
+# BuildRequires:  xcursorgen
+#
+# Suggests:       %%{style}-cursor-themes-extra
+# %%endif
 
 %if %{with kf5}
 # Qt5
@@ -101,7 +101,7 @@ Requires:       kf6-qqc2-desktop-style
 
 Requires:       %{name}-common
 Requires:       %{name}-qt6
-Requires:       %{name}-cursor-themes >= %{version}
+Requires:       %{style}-cursor-themes >= %{version}
 Requires:       %{style}-sound-theme
 # for oxygen look-and-feel
 Requires:       %{style}-icon-theme
@@ -158,7 +158,7 @@ Obsoletes:      plasma-%{style}-common < %{version}
 Summary:        The Air style for KDE
 Requires:       %{name}-common
 Requires:       %{name}-qt6
-Requires:       %{name}-cursor-themes >= %{version}
+Requires:       %{style}-cursor-themes >= %{version}
 Requires:       %{style}-sound-theme
 # for oxygen look-and-feel
 Requires:       %{style}-icon-theme
@@ -177,6 +177,7 @@ Conflicts:      plasma-air
 %if %{with kf5}
 %package        qt5
 Summary:        Oxygen widget style for Qt 5
+Requires:       %{name}-common
 Obsoletes:      qt5-style-%{style} < %{version}-%{release}
 Provides:       qt5-style-%{style} = %{version}-%{release}
 Conflicts:      plasma-%{style}-qt5
@@ -195,6 +196,7 @@ Conflicts:      plasma-%{style}-qt5
 
 %package        qt6
 Summary:        Oxygen widget style for Qt 6
+Requires:       %{name}-common
 Conflicts:      plasma-%{style}-qt6
 
 %description    qt6
@@ -238,72 +240,74 @@ BuildArch:      noarch
 
 #--------------------------------------------------------------------------------------------------
 
-%package        cursor-themes
-Summary:        Oxygen cursor themes
-BuildArch:      noarch
-Conflicts:      %{style}-cursor-themes
-
-%description    cursor-themes
-%{summary}.
-
-%files          cursor-themes
-%{_kf6_datadir}/icons/KDE_Classic/
-%{_kf6_datadir}/icons/Oxygen_Black/
-%{_kf6_datadir}/icons/Oxygen_Blue/
-%{_kf6_datadir}/icons/Oxygen_White/
-%{_kf6_datadir}/icons/Oxygen_Yellow/
-%{_kf6_datadir}/icons/Oxygen_Zion/
+# %%package        cursor-themes
+# Summary:        Oxygen cursor themes
+# BuildArch:      noarch
+# Conflicts:      %%{style}-cursor-themes
+#
+# %%description    cursor-themes
+# %%{summary}.
+#
+# %%files          cursor-themes
+# %%{_kf6_datadir}/icons/KDE_Classic/
+# %%{_kf6_datadir}/icons/Oxygen_Black/
+# %%{_kf6_datadir}/icons/Oxygen_Blue/
+# %%{_kf6_datadir}/icons/Oxygen_White/
+# %%{_kf6_datadir}/icons/Oxygen_Yellow/
+# %%{_kf6_datadir}/icons/Oxygen_Zion/
 
 #--------------------------------------------------------------------------------------------------
 
-%if %{with extra_cursors}
-%package        cursor-themes-extra
-Summary:        Extra color variants of oxygen cursor themes
-BuildArch:      noarch
-
-%description    cursor-themes-extra
-%{summary}.
-
-%files          cursor-themes-extra
-%{_kf5_datadir}/icons/oxy-bluecurve
-%{_kf5_datadir}/icons/oxy-brown
-%{_kf5_datadir}/icons/oxy-cherry
-%{_kf5_datadir}/icons/oxy-chrome
-%{_kf5_datadir}/icons/oxy-desert
-%{_kf5_datadir}/icons/oxy-emerald
-%{_kf5_datadir}/icons/oxy-green
-%{_kf5_datadir}/icons/oxy-grey
-%{_kf5_datadir}/icons/oxy-honeycomb
-%{_kf5_datadir}/icons/oxy-hot_orange
-%{_kf5_datadir}/icons/oxy-lilac
-%{_kf5_datadir}/icons/oxy-midnight_meadow
-%{_kf5_datadir}/icons/oxy-navy
-%{_kf5_datadir}/icons/oxy-norway
-%{_kf5_datadir}/icons/oxy-obsidian
-%{_kf5_datadir}/icons/oxy-obsidian-hc
-%{_kf5_datadir}/icons/oxy-olympus
-%{_kf5_datadir}/icons/oxy-olympus-inv
-%{_kf5_datadir}/icons/oxy-orchid
-%{_kf5_datadir}/icons/oxy-oxygen
-%{_kf5_datadir}/icons/oxy-peach
-%{_kf5_datadir}/icons/oxy-purple
-%{_kf5_datadir}/icons/oxy-red
-%{_kf5_datadir}/icons/oxy-red-argentina
-%{_kf5_datadir}/icons/oxy-sea_blue
-%{_kf5_datadir}/icons/oxy-steel
-%{_kf5_datadir}/icons/oxy-terra
-%{_kf5_datadir}/icons/oxy-terra_green
-%{_kf5_datadir}/icons/oxy-violet
-%{_kf5_datadir}/icons/oxy-viorange
-%{_kf5_datadir}/icons/oxy-whitewater
-%{_kf5_datadir}/icons/oxy-wonton
-%endif
+# %%if %%{with extra_cursors}
+# %%package        cursor-themes-extra
+# Summary:        Extra color variants of oxygen cursor themes
+# BuildArch:      noarch
+#
+# %%description    cursor-themes-extra
+# %%{summary}.
+#
+# %%files          cursor-themes-extra
+# %%{_kf5_datadir}/icons/oxy-bluecurve
+# %%{_kf5_datadir}/icons/oxy-brown
+# %%{_kf5_datadir}/icons/oxy-cherry
+# %%{_kf5_datadir}/icons/oxy-chrome
+# %%{_kf5_datadir}/icons/oxy-desert
+# %%{_kf5_datadir}/icons/oxy-emerald
+# %%{_kf5_datadir}/icons/oxy-green
+# %%{_kf5_datadir}/icons/oxy-grey
+# %%{_kf5_datadir}/icons/oxy-honeycomb
+# %%{_kf5_datadir}/icons/oxy-hot_orange
+# %%{_kf5_datadir}/icons/oxy-lilac
+# %%{_kf5_datadir}/icons/oxy-midnight_meadow
+# %%{_kf5_datadir}/icons/oxy-navy
+# %%{_kf5_datadir}/icons/oxy-norway
+# %%{_kf5_datadir}/icons/oxy-obsidian
+# %%{_kf5_datadir}/icons/oxy-obsidian-hc
+# %%{_kf5_datadir}/icons/oxy-olympus
+# %%{_kf5_datadir}/icons/oxy-olympus-inv
+# %%{_kf5_datadir}/icons/oxy-orchid
+# %%{_kf5_datadir}/icons/oxy-oxygen
+# %%{_kf5_datadir}/icons/oxy-peach
+# %%{_kf5_datadir}/icons/oxy-purple
+# %%{_kf5_datadir}/icons/oxy-red
+# %%{_kf5_datadir}/icons/oxy-red-argentina
+# %%{_kf5_datadir}/icons/oxy-sea_blue
+# %%{_kf5_datadir}/icons/oxy-steel
+# %%{_kf5_datadir}/icons/oxy-terra
+# %%{_kf5_datadir}/icons/oxy-terra_green
+# %%{_kf5_datadir}/icons/oxy-violet
+# %%{_kf5_datadir}/icons/oxy-viorange
+# %%{_kf5_datadir}/icons/oxy-whitewater
+# %%{_kf5_datadir}/icons/oxy-wonton
+# %%endif
 
 #---------------------------------------------------------------------------------------------------
 
 %package -n     qqc2-%{style}-style
 Summary:        Oxygen style for QQC2 apps
 Requires:       kf6-qqc2-desktop-style
+Requires:       %{name}-common
+Requires:       %{name}-qt6
 
 %description -n qqc2-%{style}-style
 %{summary}.
@@ -319,7 +323,7 @@ Requires:       kf6-qqc2-desktop-style
 %prep
 %forgeautosetup -p1
 
-# %%if %{with extra_cursors}
+# %%if %%{with extra_cursors}
 # Prepend necessary variables
 # pushd cursors/src
 # sed -i '1s/^/project(oxygen-cursors)\n/' CMakeLists.txt
@@ -341,15 +345,15 @@ pushd qt5build
 popd
 %endif
 
-%if %{with extra_cursors}
-pushd cursors/src
-%cmake_kf6
-%cmake_build -j1
+# %%if %%{with extra_cursors}
+# pushd cursors/src
+# %%cmake_kf6
+# %%cmake_build -j1
 # for theme in bluecurve brown cherry chrome desert emerald green grey honeycomb hot_orange lilac midnight_meadow navy norway obsidian obsidian-hc olympus olympus-inv orchid oxygen peach purple red red-argentina sea_blue steel terra terra_green violet viorange whitewater wonton; do
 #     %%__make -j1 theme-${theme}%%{_cursorsize_}
 # done
-popd
-%endif
+# popd
+# %%endif
 
 %install
 pushd qt6build
@@ -362,16 +366,16 @@ pushd qt5build
 popd
 %endif
 
-%if %{with extra_cursors}
-pushd cursors/src/%{_vpath_builddir}
+# %%if %%{with extra_cursors}
+# pushd cursors/src/%%{_vpath_builddir}
 # %%cmake_install
-for theme in bluecurve brown cherry chrome desert emerald green grey honeycomb hot_orange lilac midnight_meadow navy norway obsidian obsidian-hc olympus olympus-inv orchid oxygen peach purple red red-argentina sea_blue steel terra terra_green violet viorange whitewater wonton; do
-    cp -r --parents "oxy-${theme}%{_cursorsize_}/cursors" %{buildroot}%{_datadir}/icons/
-    cp -r "oxy-${theme}%{_cursorsize_}/cursors_scalable" %{buildroot}%{_datadir}/icons/oxy-${theme}%{_cursorsize_}/
-    cp "oxy-${theme}/index.theme" %{buildroot}%{_datadir}/icons/oxy-${theme}%{_cursorsize_}/
-done
-popd
-%endif
+# for theme in bluecurve brown cherry chrome desert emerald green grey honeycomb hot_orange lilac midnight_meadow navy norway obsidian obsidian-hc olympus olympus-inv orchid oxygen peach purple red red-argentina sea_blue steel terra terra_green violet viorange whitewater wonton; do
+#     cp -r --parents "oxy-${theme}%%{_cursorsize_}/cursors" %%{buildroot}%%{_datadir}/icons/
+#     cp -r "oxy-${theme}%%{_cursorsize_}/cursors_scalable" %%{buildroot}%%{_datadir}/icons/oxy-${theme}%%{_cursorsize_}/
+#     cp "oxy-${theme}/index.theme" %%{buildroot}%%{_datadir}/icons/oxy-${theme}%%{_cursorsize_}/
+# done
+# popd
+# %%endif
 
 install -Dm644 -t %{buildroot}%{_sysconfdir}/skel/.config/plasma-workspace/env/ qtquickcontrols/configure-%{style}.sh
 
@@ -382,6 +386,9 @@ chrpath --delete %{buildroot}%{_libdir}/qt6/plugins/kf6/kirigami/platform/org.kd
 #---------------------------------------------------------------------------------------------------
 
 %changelog
+* Sun Aug 9 2026 Hazel Bunny <hazel_bunny@disroot.org> - 6.7.2-0
+- Update to 6.7.2
+
 * Wed Jul 15 2026 Hazel Bunny <hazel_bunny@disroot.org> - 6.7.1-0
 - Update to 6.7.1
 
