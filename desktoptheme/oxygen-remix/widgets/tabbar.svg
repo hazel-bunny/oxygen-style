@@ -7,7 +7,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
-   sodipodi:docname="tabbar.svgz"
+   sodipodi:docname="tabbar.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -48,15 +48,12 @@
        enabled="true"
        snapvisiblegridlinesonly="true"
        color="#0000ff"
-       opacity="0.0196078"
+       opacity="0.01960784"
        empcolor="#0000ff"
        empopacity="0.03921569"
        dotted="false"
        originx="372.04724"
-       originy="526.18109"
-       spacingy="1"
-       spacingx="1"
-       units="px" />
+       originy="526.18109" />
     <sodipodi:guide
        position="0,100.001"
        orientation="0,744.09448"

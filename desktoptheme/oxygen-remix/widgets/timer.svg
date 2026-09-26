@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="744.09448819"
    height="1052.3622047"
    id="svg2"
    sodipodi:version="0.32"
    inkscape:version="0.46"
-   sodipodi:docname="timer.svgz"
-   inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   version="1.1"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:dc="http://purl.org/dc/elements/1.1/">
+   sodipodi:docname="timer.svg"
+   sodipodi:docbase="/home/kde-devel/working/playground/base/plasma/applets/timer"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <defs
      id="defs4">
     <linearGradient
@@ -484,10 +483,7 @@
      inkscape:window-width="1680"
      inkscape:window-height="993"
      inkscape:window-x="-5"
-     inkscape:window-y="-3"
-     inkscape:showpageshadow="2"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1" />
+     inkscape:window-y="-3" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -985,13 +981,12 @@
          id="text2322"
          y="442.08881"
          x="199.02405"
-         style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Bitstream Vera Sans';fill:#eb0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-size:144px;font-style:normal;font-weight:normal;fill:#eb0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
          xml:space="preserve"><tspan
            id="tspan2324"
            y="442.08881"
            x="199.02405"
-           sodipodi:role="line"
-           style="font-size:144px;line-height:1.25">:</tspan></text>
+           sodipodi:role="line">:</tspan></text>
     </g>
     <g
        id="separatorB_1"
@@ -1040,13 +1035,12 @@
          id="text2579"
          y="442.08881"
          x="199.02405"
-         style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Bitstream Vera Sans';fill:#ebebeb;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-size:144px;font-style:normal;font-weight:normal;fill:#ebebeb;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
          xml:space="preserve"><tspan
            id="tspan2581"
            y="442.08881"
            x="199.02405"
-           sodipodi:role="line"
-           style="font-size:144px;line-height:1.25"> </tspan></text>
+           sodipodi:role="line"> </tspan></text>
     </g>
     <g
        id="separatorC_1"
@@ -1063,13 +1057,12 @@
          id="text2587"
          y="442.08881"
          x="199.02405"
-         style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Bitstream Vera Sans';fill:#eb0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-size:144px;font-style:normal;font-weight:normal;fill:#eb0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
          xml:space="preserve"><tspan
            id="tspan2589"
            y="442.08881"
            x="199.02405"
-           sodipodi:role="line"
-           style="font-size:144px;line-height:1.25"> </tspan></text>
+           sodipodi:role="line"> </tspan></text>
     </g>
   </g>
 </svg>

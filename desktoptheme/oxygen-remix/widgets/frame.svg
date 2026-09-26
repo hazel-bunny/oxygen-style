@@ -7,7 +7,7 @@
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    width="17"
    height="57"
-   sodipodi:docname="frame.svgz"
+   sodipodi:docname="frame.svg"
    inkscape:output_extension="org.inkscape.output.svgz.inkscape"
    inkscape:export-filename="/home/pinheiro/Documents/pics/estilo/plasma/wether.png"
    inkscape:export-xdpi="90"
@@ -56,12 +56,7 @@
        enabled="true"
        visible="true"
        id="grid5592"
-       type="xygrid"
-       originx="0"
-       originy="0"
-       spacingy="1"
-       spacingx="1"
-       units="px" />
+       type="xygrid" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
